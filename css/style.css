@@ -1,0 +1,162 @@
+/* Start Variables */
+:root {
+    --bg-color: hsl(257, 40%, 49%);
+    --second-color: hsl(300, 69%, 71%);
+}
+/* End Variables */
+/* Start Global Rules */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--bg-color);
+    position: relative;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Poppins', sans-serif;
+}
+.container {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+/* Medium Screens */
+@media (min-width: 992px) {
+    .container {
+        width: 950px ;
+    }
+}
+/* Large Width */
+@media (min-width: 1200px) {
+    .container {
+        width: 1150px ;
+    }
+}
+/* X Large Width */
+@media (min-width: 1400px) {
+    .container {
+        width: 1300px ;
+    }
+}
+/* End Global Rules */
+/* Start Background-image */
+.desktop {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.phone {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+@media (max-width: 767px) {
+    .desktop {
+        display: none !important;
+    }
+    .phone {
+        display: block !important;
+    }
+}
+/* End Background-image */
+/* Start The Page */
+header {
+    padding: 30px 0 60px;
+}
+.flex {
+    display: grid;
+    gap: 40px;
+    grid-template-columns: repeat(auto-fill, minmax(500px, auto));
+    align-items: center;
+}
+@media (max-width: 600px) {
+    .left {
+        width: 300px;
+        height: 300px !important;
+        position: relative;
+        margin-left: 5px;
+    }
+    .left img {
+        width: 100% !important;
+    }
+    .right {
+        margin-top: 250px;
+    }
+    .right h2 {
+        font-size: 30px !important;
+        width: 300px;
+        text-align: center;
+    }
+    .right .small-pargrah {
+        width: 300px;
+        text-align: center;
+    }
+    .right button {
+        margin-left: 13%;
+    }
+    .font-awsome {
+        padding-bottom: 20px;
+        width: 100%;
+        padding-left: 50%;
+        margin-right: 50px;
+    }
+}
+.flex .right h2 {
+    color: white;
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+.flex .right .small-pargrah {
+    color: white;
+    opacity: .9;
+    margin-bottom: 20px;
+}
+.flex .right button {
+    width: 175px;
+    padding: 20px;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    font-size: 17px;
+    color: var(--bg-color);
+    cursor: pointer;
+    transition: .3s background-color;
+}
+.flex .right button:active {
+    background-color: var(--second-color);
+}
+/* Font Awesome */
+.font-awsome {
+    position: absolute;
+    bottom: -175px;
+    right: 50px;
+}
+.font-awsome i {
+    margin-left: 30px;
+    font-size: 25px;
+    color: white;
+    transition: .3s color;
+    cursor: pointer;
+}
+.font-awsome i:active {
+    color: var(--second-color);
+}
+/* End The Page */
+/* Media Quries */
